@@ -21,6 +21,13 @@
   },
   "homepage": "https://github.com/elizablok/backend-project-lvl1#readme",
   "dependencies": {
-    "package-lock.json": "^1.0.0"
+    "make": "^0.8.1",
+    "package-lock.json": "^1.0.0",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4"
   }
 }
