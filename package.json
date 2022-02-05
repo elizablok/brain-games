@@ -5,7 +5,8 @@
   "description": "[![Actions Status](https://github.com/elizablok/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/elizablok/backend-project-lvl1/actions)",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js"
+    "brain-even": "bin/brain-even.js",
+    "brain-culc": "bin/brain-culc.js"
   },
   "main": "index.js",
   "scripts": {

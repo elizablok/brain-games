@@ -10,12 +10,12 @@ const game = (func) => {
   let index = 0;
   for (; index < numOfQuestions; index += 1) {
     const getRandom = func();
-    console.log(`Question: ${getRandom[0]}`);
+    console.log(`Question: ${getRandom[1]}`);
     const answer = readlineSync.question('Your answer: ');
-    if (answer === getRandom[1]) {
+    if (answer === String(getRandom[0])) {
       console.log('Correct!');
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${getRandom[1]}'. Let's try again, ${name}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${getRandom[0]}'. Let's try again, ${name}!`);
       break;
     }
   }
