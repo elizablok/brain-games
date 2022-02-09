@@ -1,4 +1,4 @@
-const getEvenNum = () => {
+const isNumEven = () => {
   const randomNum = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
   const result = [];
   if (randomNum % 2 === 0) {
@@ -9,4 +9,4 @@ const getEvenNum = () => {
   result.push('Answer "yes" if the number is even, otherwise answer "no".');
   return result;
 };
-export default getEvenNum;
+export default isNumEven;
