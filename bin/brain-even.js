@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import game from '../src/test.js';
-import isNumEven from '../src/isNumEven.js';
+import play from '../src/engine.js';
+import getEvenNum from '../games/getEvenNum.js';
 
-game(isNumEven);
+play(getEvenNum);

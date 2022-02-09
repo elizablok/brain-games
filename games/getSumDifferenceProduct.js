@@ -1,4 +1,4 @@
-const simpleCalculator = () => {
+const getSumDifferenceProduct = () => {
   const mathOperation = ['+', '-', '*'];
   const firstNum = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
   const secondNum = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
@@ -21,4 +21,4 @@ const simpleCalculator = () => {
   result.push(`${firstNum} ${randomMath} ${secondNum}`, 'What is the result of the expression?');
   return result;
 };
-export default simpleCalculator;
+export default getSumDifferenceProduct;
