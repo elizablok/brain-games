@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import play from '../src/engine.js';
-import isNumPrime from '../games/isNumPrime.js';
+import startIsNumPrime from '../src/games/isNumPrime.js';
 
-play(isNumPrime);
+startIsNumPrime();

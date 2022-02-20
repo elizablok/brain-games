@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import play from '../src/engine.js';
-import getSumDifferenceProduct from '../games/getSumDifferenceProduct.js';
+import startGetSumDifferenceProduct from '../src/games/getSumDifferenceProduct.js';
 
-play(getSumDifferenceProduct);
+startGetSumDifferenceProduct();

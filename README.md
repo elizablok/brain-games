@@ -30,3 +30,15 @@ The project consists of 5 mini-games:
 
 ### Asciinema brain-prime
 [![asciicast brain-prime](https://asciinema.org/a/467954.svg)](https://asciinema.org/a/467954)
+
+## Usage
+
+Install the project's package:
+```sh
+make install
+```
+
+Create commands of the project's games:
+```sh
+npm link
+```
