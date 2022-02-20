@@ -18,5 +18,5 @@ const getArithmeticProgression = () => {
 };
 
 const gameRule = 'What number is missing in the progression?';
-const startGetArithmeticProgression = () => play (gameRule, getArithmeticProgression);
+const startGetArithmeticProgression = () => play(gameRule, getArithmeticProgression);
 export default startGetArithmeticProgression;
