@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import startGetGreatestCommonDivisor from '../src/games/getGreatestCommonDivisor.js';
+import playGetGreatestCommonDivisor from '../src/games/getGreatestCommonDivisor.js';
 
-startGetGreatestCommonDivisor();
+playGetGreatestCommonDivisor();

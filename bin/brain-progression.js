@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import startGetArithmeticProgression from '../src/games/getArithmeticProgression.js';
+import playGetArithmeticProgression from '../src/games/getArithmeticProgression.js';
 
-startGetArithmeticProgression();
+playGetArithmeticProgression();

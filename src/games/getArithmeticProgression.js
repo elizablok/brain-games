@@ -1,22 +1,30 @@
 import randomise from '../randomise.js';
-import play from '../engine.js';
+import start from '../engine.js';
 
-const getArithmeticProgression = () => {
+const gameRule = 'What number is missing in the progression?';
+
+const generateProgression = (member, difference, length) => {
   const sequence = [];
-  const difference = randomise(1, 10);
-  let member = randomise(1, 50);
-  const sequenceLength = randomise(5, 10);
-  const missingMemberIndex = randomise(0, sequenceLength - 1);
-  for (; sequence.length < sequenceLength; member += difference) {
-    sequence.push(member);
+  for (let member1 = member; sequence.length < length; member1 += difference) {
+    sequence.push(member1);
   }
-  const sequenceCopy = sequence.slice();
-  sequenceCopy[missingMemberIndex] = '..';
+  return sequence;
+};
+
+const getArithmeticProgressionGame = () => {
+  const randomDifference = randomise(1, 10);
+  const randomMember = randomise(1, 50);
+  const randomLength = randomise(5, 10);
+  const progression = generateProgression(randomMember, randomDifference, randomLength);
+  const progressionCopy = progression.slice();
+  const missingMemberIndex = randomise(0, randomLength - 1);
+  progressionCopy[missingMemberIndex] = '..';
+  const question = progressionCopy.join(' ');
+  const answer = String(progression[missingMemberIndex]);
   const result = [];
-  result.push(sequence[missingMemberIndex], sequenceCopy.join(' '));
+  result.push(question, answer);
   return result;
 };
 
-const gameRule = 'What number is missing in the progression?';
-const startGetArithmeticProgression = () => play(gameRule, getArithmeticProgression);
-export default startGetArithmeticProgression;
+const playGetArithmeticProgression = () => start(gameRule, getArithmeticProgressionGame);
+export default playGetArithmeticProgression;

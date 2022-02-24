@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import startIsNumEven from '../src/games/isNumEven.js';
+import playIsNumEven from '../src/games/isNumEven.js';
 
-startIsNumEven();
+playIsNumEven();

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import startGetSumDifferenceProduct from '../src/games/getSumDifferenceProduct.js';
+import playGetSumDifferenceProduct from '../src/games/getSumDifferenceProduct.js';
 
-startGetSumDifferenceProduct();
+playGetSumDifferenceProduct();

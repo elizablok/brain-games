@@ -1,22 +1,25 @@
 import randomise from '../randomise.js';
-import play from '../engine.js';
+import start from '../engine.js';
 
-const isNumPrime = () => {
-  const isPrime = (num) => {
-    for (let divisor = 2; divisor * divisor <= num; divisor += 1) {
-      if (num % divisor === 0) {
-        return 'no';
-      }
+const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
+const isPrime = (num) => {
+  for (let divisor = 2; divisor * divisor <= num; divisor += 1) {
+    if (num % divisor === 0) {
+      return false;
     }
-    return 'yes';
-  };
+  }
+  return true;
+};
 
+const getIsPrimeGame = () => {
   const randomNum = randomise(2, 100);
+  const question = String(randomNum);
+  const answer = isPrime(randomNum) ? 'yes' : 'no';
   const result = [];
-  result.push(isPrime(randomNum), randomNum);
+  result.push(question, answer);
   return result;
 };
 
-const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const startIsNumPrime = () => play(gameRule, isNumPrime);
-export default startIsNumPrime;
+const playIsNumPrime = () => start(gameRule, getIsPrimeGame);
+export default playIsNumPrime;
