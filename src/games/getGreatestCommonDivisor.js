@@ -6,24 +6,16 @@ const gameRule = 'Find the greatest common divisor of given numbers.';
 const findGreatestCommonDivisor = (num1, num2) => {
   let int1 = num1;
   let int2 = num2;
-  while (int1 !== int2) {
-    if (int1 > int2) {
-      int1 -= int2;
-    } else {
-      int2 -= int1;
-    }
-  }
-  return int1;
+  const res = (int2 === 0) ? int1 : findGreatestCommonDivisor(int2, int1 % int2); 
+  return res;
 };
 
 const getGreatestCommonDivisorGame = () => {
   const firstNum = randomise(1, 100);
   const secondNum = randomise(1, 100);
-  const result = [];
   const question = `${firstNum} ${secondNum}`;
   const answer = String(findGreatestCommonDivisor(firstNum, secondNum));
-  result.push(question, answer);
-  return result;
+  return [question, answer];
 };
 
 const playGetGreatestCommonDivisorGame = () => start(gameRule, getGreatestCommonDivisorGame);

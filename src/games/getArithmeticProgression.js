@@ -5,25 +5,27 @@ const gameRule = 'What number is missing in the progression?';
 
 const generateProgression = (member, difference, length) => {
   const sequence = [];
-  for (let member1 = member; sequence.length < length; member1 += difference) {
-    sequence.push(member1);
+  for (let current = member; sequence.length < length; current += difference) {
+    sequence.push(current);
   }
   return sequence;
 };
 
+const hideProgressionMember = (numericalOrder, hiddenMemberIndex) => {
+  const numericalOrderCopy = numericalOrder.slice();
+  numericalOrderCopy[hiddenMemberIndex] = '..';
+  return numericalOrderCopy.join(' ');
+};
+
 const getArithmeticProgressionGame = () => {
   const randomDifference = randomise(1, 10);
-  const randomMember = randomise(1, 50);
+  const randomStartMember = randomise(1, 50);
   const randomLength = randomise(5, 10);
-  const progression = generateProgression(randomMember, randomDifference, randomLength);
-  const progressionCopy = progression.slice();
+  const progression = generateProgression(randomStartMember, randomDifference, randomLength);
   const missingMemberIndex = randomise(0, randomLength - 1);
-  progressionCopy[missingMemberIndex] = '..';
-  const question = progressionCopy.join(' ');
+  const question = hideProgressionMember(progression, missingMemberIndex);
   const answer = String(progression[missingMemberIndex]);
-  const result = [];
-  result.push(question, answer);
-  return result;
+  return [question, answer];
 };
 
 const playGetArithmeticProgression = () => start(gameRule, getArithmeticProgressionGame);

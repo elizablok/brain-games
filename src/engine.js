@@ -12,9 +12,8 @@ const start = (gameRule, play) => {
     const [question, answer] = play();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const loose = `"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}". Let's try again, ${name}!`;
     if (userAnswer !== answer) {
-      return console.log(loose);
+      return console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}". Let's try again, ${name}!`);
     }
     console.log('Correct!');
   }

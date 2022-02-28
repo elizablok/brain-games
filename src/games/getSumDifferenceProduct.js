@@ -21,11 +21,9 @@ const getSumDifferenceProductGame = () => {
   const randomMathOperation = mathOperations[randomIndex];
   const firstNum = randomise(1, 100);
   const secondNum = randomise(1, 100);
-  const result = [];
   const question = `${firstNum} ${randomMathOperation} ${secondNum}`;
   const answer = String(solveExpression(firstNum, secondNum, randomMathOperation));
-  result.push(question, answer);
-  return result;
+  return [question, answer];
 };
 
 const playGetSumDifferenceProduct = () => start(gameRule, getSumDifferenceProductGame);
