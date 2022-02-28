@@ -4,9 +4,9 @@ import start from '../engine.js';
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
 const findGreatestCommonDivisor = (num1, num2) => {
-  let int1 = num1;
-  let int2 = num2;
-  const res = (int2 === 0) ? int1 : findGreatestCommonDivisor(int2, int1 % int2); 
+  const int1 = num1;
+  const int2 = num2;
+  const res = (int2 === 0) ? int1 : findGreatestCommonDivisor(int2, int1 % int2);
   return res;
 };
 
