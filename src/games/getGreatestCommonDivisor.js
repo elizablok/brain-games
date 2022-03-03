@@ -3,7 +3,7 @@ import start from '../engine.js';
 
 const gameRule = 'Find the greatest common divisor of given numbers.';
 
-const findGreatestCommonDivisor = (num1, num2) => (int2 === 0) ? int1 : findGreatestCommonDivisor(int2, int1 % int2);
+const findGreatestCommonDivisor = (num1, num2) => (num2 === 0) ? num1 : findGreatestCommonDivisor(num2, num1 % num2);
 
 const getGreatestCommonDivisorGame = () => {
   const firstNum = randomise(1, 100);
